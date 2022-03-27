@@ -4,5 +4,5 @@ export function getCookie(name: string) {
       '(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)',
     ),
   )
-  return matches ? decodeURIComponent(matches[1]) : undefined
+  return matches ? decodeURIComponent(matches[1]) : ''
 }

@@ -6,7 +6,7 @@ export const EmptyBasket = () => {
   return (
     <div className="emptyBasket">
       <p className="emptyBasket__msg">
-        У-упс! Ваша корзина пуста. Перейдите
+        У-упс! Ваша корзина пуста. Перейдите{' '}
         <Link to="/catalog" className="emptyBasket__msg__link">
           в каталог
         </Link>

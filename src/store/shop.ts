@@ -17,7 +17,7 @@ export const ShopReducer = createSlice({
       if (getCookie('basketProducts'))
         return (state = {
           ...state,
-          basketProducts: JSON.parse(getCookie('basketProducts') as string),
+          basketProducts: JSON.parse(getCookie('basketProducts')),
         })
     },
     addInBasket: (state, action) => {

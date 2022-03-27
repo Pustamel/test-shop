@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { product } from '../../store/types'
 
 export const Catalog = () => {
-  const state = useAppSelector(state1 => state1.shop)
+  const state = useAppSelector(state => state.shop)
   const dispatch = useAppDispatch()
 
   const onAddInBasket = (item: product) => {
@@ -23,10 +23,10 @@ export const Catalog = () => {
               <p className="container-product__info__title">{item.name}</p>
               <p className="container-product__info__price">{item.price} р.</p>
 
-              {state.basketProducts.findIndex(
+              {!!state.basketProducts.find(
                 product => product.id === item.id,
-              ) >= 0 ? (
-                <Link className="container-product__info__link" to="/basket">
+              ) ? (
+                <Link to="/basket">
                   <Button color="blue" text="Оформить заказ" />
                 </Link>
               ) : (

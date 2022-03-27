@@ -3,9 +3,9 @@ import { BasketProducts } from '../../components/basketProducts/BasketProducts'
 import { EmptyBasket } from '../../components/emptyBasket/EmptyBasket'
 
 export const Basket = () => {
-  const state = useAppSelector(state1 => state1.shop)
+  const basketProducts = useAppSelector(state => state.shop.basketProducts)
 
   return (
-    <>{state.basketProducts.length ? <BasketProducts /> : <EmptyBasket />}</>
+    <>{basketProducts.length ? <BasketProducts /> : <EmptyBasket />}</>
   )
 }

@@ -4,14 +4,14 @@ import './BasketProducts.css'
 import { deleteFromBasket } from '../../store/shop'
 
 export const BasketProducts = () => {
-  const state = useAppSelector(state1 => state1.shop)
+  const basketProducts = useAppSelector(state => state.shop.basketProducts)
   const dispatch = useAppDispatch()
 
   const getResultPrice = () => {
-    const initialValue = 0
-    return state.basketProducts.reduce(
+    const initialPrice = 0
+    return basketProducts.reduce(
       (previousValue, currentValue) => previousValue + currentValue.price,
-      initialValue,
+        initialPrice,
     )
   }
 
@@ -26,11 +26,10 @@ export const BasketProducts = () => {
           <tr className="table__head__tr">
             <th>Название</th>
             <th>Цена</th>
-            <th> </th>
           </tr>
         </thead>
-        <tbody className="table__body">
-          {state.basketProducts.map(item => {
+        <tbody>
+          {basketProducts.map(item => {
             return (
               <tr key={item.id} className="table__body__tr">
                 <td>{item.name}</td>
@@ -38,7 +37,7 @@ export const BasketProducts = () => {
                 <td>
                   <button
                     onClick={() => onDeleteProduct(item.id)}
-                    className="table__body__tr__btn"
+                    className="tr__btn"
                   >
                     <p>Убрать</p>
                     <img src={basket} alt="" />

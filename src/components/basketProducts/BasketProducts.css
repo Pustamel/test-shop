@@ -9,7 +9,7 @@
   color: #74b621;
   font-size: 16px;
   margin-top: 50px;
-  border-spacing: 0 1rem;
+  border-spacing: 0 16px;
 }
 
 .table__head__tr th {
@@ -38,7 +38,7 @@
 }
 
 /*btn for delete product*/
-.table__body__tr__btn {
+.tr__btn {
   all: unset;
   display: flex;
   gap: 3px;
