@@ -1,0 +1,19 @@
+.button {
+  all: unset;
+  width: 155px;
+  height: 30px;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.green {
+  background-color: #8cd035;
+}
+
+.blue {
+  background: #2ec790;
+}

@@ -1,0 +1,47 @@
+.basket {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 800px;
+  border-collapse: collapse;
+  color: #74b621;
+  font-size: 16px;
+  margin-top: 50px;
+  border-spacing: 0 1rem;
+}
+
+.table__head__tr th {
+  font-weight: normal;
+  padding: 10px 0;
+  width: 200px;
+}
+
+.table__body__tr {
+  border: 1px solid #74b621;
+}
+
+.table__body__tr td {
+  padding: 15px 20px;
+  width: 200px;
+}
+
+.table__body__tr td:nth-child(2) {
+  text-align: center;
+}
+
+.basket__result-price {
+  text-align: end;
+  color: #476800;
+  margin-top: 25px;
+}
+
+/*btn for delete product*/
+.table__body__tr__btn {
+  all: unset;
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+  margin-left: auto;
+}
